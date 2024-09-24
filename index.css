@@ -1,0 +1,245 @@
+/* General Reset */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif; /* Stylish font */
+    background: linear-gradient(45deg, #141e30, #243b55); /* Gradient background */
+    color: white;
+}
+
+/* Smooth Scrolling */
+html {
+    scroll-behavior: smooth; /* Enables smooth scrolling */
+}
+
+/* Navbar Styling */
+#navbar {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
+    z-index: 100;
+}
+
+#navbar a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 1.2em;
+    transition: color 0.3s ease; /* Smooth transition for hover */
+}
+
+#navbar a:hover {
+    color: #ffbf00; /* Golden hover color */
+    text-decoration: underline;
+}
+
+/* Container Styling */
+#container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full viewport height for initial container */
+    text-align: center;
+    background: url('./images/home.jpg') no-repeat center center/cover;
+}
+
+#title {
+    font-size: 8em; /* Adjust the size as needed */
+    font-weight: bold;
+    color: #fff;
+    text-transform: uppercase; /* Uppercase text */
+    margin: 0;
+    text-shadow: 3px 3px 0 #333, 6px 6px 0 #555, 9px 9px 0 #777, 12px 12px 0 #999;
+    animation: floatTitle 3s infinite ease-in-out; /* Floating animation */
+}
+
+@keyframes floatTitle {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
+}
+
+/* Description and Register Button */
+#description {
+    font-size: 1.5em;
+    color: #f0f0f0;
+    margin: 20px 0;
+    max-width: 600px;
+    line-height: 1.6;
+    animation: fadeIn 2s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+#register-button {
+    padding: 15px 30px;
+    font-size: 1.2em;
+    color: white;
+    background-color: #007bff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth hover effect */
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+#register-button:hover {
+    background-color: #0056b3;
+    transform: scale(1.1); /* Slight zoom on hover */
+}
+
+/* About Section Styling */
+#about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px;
+    background: linear-gradient(to right, #1f4037, #99f2c8); /* Decorative gradient */
+    color: white;
+}
+
+.section-title {
+    font-size: 3em;
+    margin-bottom: 40px;
+    color: white;
+    text-align: center;
+    animation: slideIn 1s ease-out;
+}
+
+@keyframes slideIn {
+    from { transform: translateX(-100px); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+
+.about-column h3 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: white;
+    text-align: center;
+}
+
+.about-column p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Events Section Styling */
+#events {
+    background-color: #222;
+    padding: 50px;
+    text-align: center;
+}
+
+.events-column {
+    padding: 20px;
+    max-width: 800px;
+    margin: 20px auto;
+    background-color: #444;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.5);
+    transition: transform 0.3s ease; /* Hover effect for event cards */
+}
+
+.events-column:hover {
+    transform: scale(1.05); /* Zoom effect on hover */
+}
+
+.events-column h3 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #ffbf00; /* Highlighted heading */
+}
+
+.events-column p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.btn {
+    background-color: #007bff;
+    animation: glow 2s infinite alternate;
+}
+
+/* Register Button Specific Styling */
+.btn-register {
+    background-color: #007bff;
+    animation: glow 2s infinite alternate;
+}
+
+@keyframes glow {
+    from { box-shadow: 0 0 10px #007bff; }
+    to { box-shadow: 0 0 20px #007bff; }
+}
+
+.btn-register:hover {
+    background-color: #0056b3;
+}
+
+/* Team Section Styling */
+#team {
+    padding: 50px;
+    background-color: #333; /* Dark background for contrast */
+}
+
+.team-container {
+    display: flex;
+    justify-content: center; /* Center align the team members horizontally */
+    gap: 20px; /* Space between the images */
+    flex-wrap: wrap; /* Allows wrapping if the viewport is too narrow */
+}
+
+.team-member {
+    text-align: center;
+    flex: 1 1 200px; /* Allows for flexible sizing, with a minimum width of 200px */
+    max-width: 200px; /* Restrict maximum width of each image */
+}
+
+.team-member img {
+    width: 100%; /* Make image take full width of its container */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 50%; /* Circular images */
+    object-fit: cover; /* Ensure images cover the circle without distortion */
+}
+
+.team-member p {
+    margin-top: 10px;
+    font-size: 1.2em;
+    color: white;
+}
+
+/* Footer Styling */
+#contact {
+    padding: 50px;
+    background-color: #222;
+    text-align: left;
+}
+
+#contact p {
+    font-size: 1.2em;
+    margin: 0;
+}
+
+#contact a {
+    color: #1e90ff;
+    text-decoration: none;
+}
+
+#contact a:hover {
+    text-decoration: underline;
+}

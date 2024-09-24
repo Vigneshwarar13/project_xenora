@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart - Xenora</title>
+    <link rel="stylesheet" href="cart.css">
+    <script>
+        function displayCartItems() {
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            const cartItemsContainer = document.querySelector('.cart-items');
+            const totalPriceElement = document.getElementById('total-price');
+            let totalPrice = 0;
+
+            cartItemsContainer.innerHTML = ''; // Clear the container
+
+            cart.forEach(item => {
+                const itemElement = document.createElement('div');
+                itemElement.classList.add('cart-item');
+                itemElement.innerHTML = `
+                    <h2>${item.name}</h2>
+                    <p>Price: ₹${item.price}</p>
+                    <p>Quantity: ${item.quantity}</p>
+                `;
+                cartItemsContainer.appendChild(itemElement);
+
+                // Calculate total price
+                totalPrice += item.price * item.quantity;
+            });
+
+            // Update the total price on the page
+            totalPriceElement.textContent = totalPrice;
+        }
+
+        document.addEventListener('DOMContentLoaded', displayCartItems);
+    </script>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="merchandise.html">Merchandise</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <div class="main-section">
+        <h1 class="title">Shopping Cart</h1>
+        <div class="cart-items">
+            <!-- Cart items will be dynamically added here -->
+        </div>
+        <div class="cart-total">
+            <h2>Total: ₹<span id="total-price">0</span></h2>
+            <a href="payment.html" class="payment-button">Proceed to Payment</a>
+        </div>
+    </div>
+</body>
+</html>

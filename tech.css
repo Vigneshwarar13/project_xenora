@@ -1,0 +1,70 @@
+/* General Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+header {
+    background-color: #333;
+    padding: 10px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: flex-start;
+}
+
+nav li {
+    margin-right: 20px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+.main-section {
+    padding-top: 60px; /* Space for the fixed header */
+    padding: 20px;
+    text-align: center;
+}
+
+.title {
+    font-size: 3em;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.events-section {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: left; /* Align the text to the left for the subheadings */
+}
+
+.event-heading {
+    font-size: 2.5em;
+    margin-top: 20px;
+    color: #333;
+}
+
+.event-description {
+    font-size: 1.2em;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}

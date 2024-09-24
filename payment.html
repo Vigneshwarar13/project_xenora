@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment - Xenora</title>
+    <link rel="stylesheet" href="payment.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="cart.html">Cart</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <div class="main-section">
+        <h1 class="title">Payment</h1>
+        <div class="payment-options">
+            <div class="payment-option">
+                <h2>UPI Payment</h2>
+                <p>Pay using UPI by scanning the QR code or using your UPI ID.</p>
+                <img src="./images/qr.jpg" alt="UPI QR Code">
+            </div>
+            <div class="payment-option">
+                <h2>Net Banking</h2>
+                <p>Select your bank and proceed with net banking.</p>
+                <form>
+                    <label for="bank">Select Bank:</label>
+                    <select id="bank" name="bank">
+                        <option value="sbi">State Bank of India</option>
+                        <option value="hdfc">HDFC Bank</option>
+                        <option value="icici">ICICI Bank</option>
+                        <!-- Add more banks as needed -->
+                    </select>
+                    <button type="submit">Proceed with Net Banking</button>
+                </form>
+            </div>
+            <div class="payment-option">
+                <h2>Card Payment</h2>
+                <p>Pay using your credit or debit card.</p>
+                <form>
+                    <label for="card-number">Card Number:</label>
+                    <input type="text" id="card-number" name="card-number" placeholder="Enter card number" required>
+                    
+                    <label for="card-expiry">Expiry Date:</label>
+                    <input type="text" id="card-expiry" name="card-expiry" placeholder="MM/YY" required>
+                    
+                    <label for="card-cvc">CVC:</label>
+                    <input type="text" id="card-cvc" name="card-cvc" placeholder="Enter CVC" required>
+                    
+                    <button type="submit">Pay Now</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

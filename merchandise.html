@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Merchandise - Xenora</title>
+    <link rel="stylesheet" href="merchandise.css">
+    <script>
+        function addToCart(itemName, itemPrice) {
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            const itemIndex = cart.findIndex(item => item.name === itemName);
+
+            if (itemIndex !== -1) {
+                cart[itemIndex].quantity += 1;
+            } else {
+                cart.push({ name: itemName, price: itemPrice, quantity: 1 });
+            }
+
+            localStorage.setItem('cart', JSON.stringify(cart));
+            alert(itemName + ' has been added to your cart.');
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="cart.html">Cart</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <div class="main-section">
+        <h1 class="title">Merchandise</h1>
+        <div class="categories">
+            <div class="category">
+                <img src="./images/merch/1.jpg" alt="T-Shirt">
+                <h2>T-Shirt</h2>
+                <p>Price: ₹500</p>
+                <a href="javascript:void(0);" class="add-to-cart-button" onclick="addToCart('T-Shirt', 500)">Add to Cart</a>
+            </div>
+            <div class="category">
+                <img src="./images/merch/3.jpg" alt="Cap">
+                <h2>Cap</h2>
+                <p>Price: ₹300</p>
+                <a href="javascript:void(0);" class="add-to-cart-button" onclick="addToCart('Cap', 300)">Add to Cart</a>
+            </div>
+            <div class="category">
+                <img src="./images/merch/4.jpg" alt="Mug">
+                <h2>Mug</h2>
+                <p>Price: ₹200</p>
+                <a href="javascript:void(0);" class="add-to-cart-button" onclick="addToCart('Mug', 200)">Add to Cart</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+

@@ -1,0 +1,94 @@
+/* Login Page Styling */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    background-color: black(0, 0, 0); /* Background color for the login page */
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333; /* Dark background for the header */
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow effect */
+}
+
+.home-button {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+    padding: 10px 20px;
+    display: inline-block;
+}
+
+.home-button:hover {
+    background-color: black; /* Slightly lighter background on hover */
+}
+
+.login-container {
+    background-color: white; /* Background color for the login container */
+    padding: 30px;
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow effect for depth */
+    width: 100%;
+    max-width: 400px; /* Maximum width for the form container */
+    margin: 60px auto; /* Center horizontally and provide space below the fixed header */
+    text-align: center; /* Center-align text */
+}
+
+.login-title {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: black;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Space between form elements */
+}
+
+.login-form label {
+    font-size: 1.2em;
+    color: black;
+    text-align: left;
+}
+
+.login-form input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+.login-form button {
+    padding: 10px;
+    background-color: #007bff; /* Button color */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+.login-form button:hover {
+    background-color: #0056b3; /* Darker button color on hover */
+}
+
+.new-user-link {
+    display: block;
+    margin-top: 20px;
+    color: #007bff; /* Link color */
+    text-decoration: none;
+    font-size: 1em;
+}
+
+.new-user-link:hover {
+    text-decoration: underline;
+}
